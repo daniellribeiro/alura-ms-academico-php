@@ -14,13 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '8.0'
-
     - name: Mark repo as safe
-      run: git config --global --add safe.directory $GITHUB_WORKSPACE
+      run: git config --global --add safe.directory /app
 
     - name: Composer Install
       uses: php-actions/composer@v6
