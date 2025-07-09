@@ -16,7 +16,7 @@ jobs:
     - name: Composer Install
       uses: php-actions/composer@v6
       with:
-         php_extensions: sockets pdo_plsql
+         php_extensions: sockets pdo_pgsql
 
     - name: PHPCS
       run: composer run phpcs
